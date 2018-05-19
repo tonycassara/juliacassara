@@ -1,11 +1,12 @@
 import React from 'react'
-import { NavBar } from './components'
+import { NavBar, YouTubeModal } from './components'
 import VideoGrid from './containers'
 
 const App = () => (
-  <div>
+  <div className="main">
     <NavBar />
     <VideoGrid />
+    <YouTubeModal />
   </div>
 )
 
