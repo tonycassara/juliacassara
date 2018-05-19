@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300');
+
+html {
+  font-size: 20px;
+}
+
+body, p, li, ul, div, span {
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #525252;
+}
+
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: .15em;
+  color: #525252;
+}
+
+#navBar {
+  padding: 1em;
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menuBar > h6 {
+  margin: 0 1vw;
+}
+
+#menuBar > h6, #navBar > h1 {
+  display: inline-block;
+}
+
+.videoGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.videoPane {
+  width: 30vw;
+  height: 40vh;
+  padding: 1em;
+  flex: 2 1 auto;
+}
+
+.videoEmbed {
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  #menuBar {
+    display: grid;
+  }
+  #menuBar > h6 {
+    margin: 1vh;
+  }
+  .videoGrid {
+    flex-direction: column;
+  }
+  .videoPane {
+    width: 90vw;
+  }
+}

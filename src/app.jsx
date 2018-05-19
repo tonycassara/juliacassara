@@ -1,10 +1,12 @@
 import React from 'react'
+import { NavBar } from './components'
+import VideoGrid from './containers'
 
-const App = () => {
-  return <div>
-    <h1>Hello React! YES</h1>
-  <div>Hello React! YES</div>
+const App = () => (
+  <div>
+    <NavBar />
+    <VideoGrid />
   </div>
-}
+)
 
 export default App
