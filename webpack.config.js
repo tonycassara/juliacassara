@@ -1,7 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: ['babel-polyfill', './src/index.html'],
+  template: './src/index.html',
   filename: './index.html',
   css: ['./src/style.css'],
 })
