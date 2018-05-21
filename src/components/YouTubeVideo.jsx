@@ -36,8 +36,6 @@ class YouTubeVideo extends React.Component {
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          mozallowfullscreen
-          webkitallowfullscreen
           style={this.state.loading ? {} : {
             opacity: 1,
             height: 'calc(85vw / 1.777777777777)'
