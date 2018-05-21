@@ -49,8 +49,8 @@ h6 {
 
 .play-icon {
   position: absolute;
-  width: 2.5em;
-  height: 2.5em;
+  width: 4em;
+  height: auto;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
