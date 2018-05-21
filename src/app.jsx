@@ -43,14 +43,17 @@ class App extends React.Component {
   }
 
   render() {
-    const { modalVisible, selectedVideo, videoList } = this.state
+    const {
+      modalVisible,
+      selectedVideo,
+      videoList
+    } = this.state
     return (
       <div id="main">
         <NavBar />
         <VideoGrid toggleModal={this.toggleModal} videoList={videoList} />
         <VideoModal
           modalVisible={modalVisible}
-          selectedVideo={selectedVideo}
         >
           <YouTubeVideo
             modalVisible={modalVisible}

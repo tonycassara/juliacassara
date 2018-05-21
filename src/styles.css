@@ -146,8 +146,15 @@ h6 {
 .video-embed {
   z-index: 110;
   width: 85vw;
-  height: calc(85vw / 1.777777777777);
-  object-fit: cover;
+  opacity: 0;
+  height: 0;
+  transition: opacity .25s, height 0.5s;
+}
+
+#loading-icon {
+  z-index: 105;
+  position: absolute;
+  fill: pink;
 }
 
 @media only screen and (max-width: 600px) {
