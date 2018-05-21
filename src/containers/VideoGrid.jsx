@@ -1,22 +1,28 @@
 import React from 'react'
-import { YouTubePreview } from '../components'
+import propTypes from 'prop-types'
+import { VideoPreview } from '../components'
 
-const videos = new Array(9).fill(
-  {
-    video: 'https://www.youtube.com/embed/bhtFtc1dqqw??hd=1&modestbranding=0&autohide=1&showinfo=0&controls=1&showsearch=0',
-    img: 'https://img.youtube.com/vi/bhtFtc1dqqw/maxresdefault.jpg'
-  },
-  0,
-  9
-)
-
-const VideoGrid = () => {
-  const videoGrid = videos.map(video => (<YouTubePreview video={video} />))
+const VideoGrid = ({ toggleModal, videoList }) => {
+  const videoGrid = videoList.map(video =>
+    (<VideoPreview
+      video={video}
+      toggleModal={toggleModal}
+    />))
   return (
-    <div className="videoGrid">
+    <div className="video-grid">
       {videoGrid}
     </div>
   )
 }
 
 export default VideoGrid
+
+VideoGrid.defaultProps = {
+  toggleModal: propTypes.func,
+  videoList: propTypes.array
+}
+
+VideoGrid.propTypes = {
+  toggleModal: propTypes.func,
+  videoList: propTypes.array
+}

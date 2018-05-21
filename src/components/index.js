@@ -1,13 +1,13 @@
 import NavBar from './NavBar'
 import MenuBar from './MenuBar'
-import YouTubeModal from './YouTubeModal'
-import YouTubePreview from './YouTubePreview'
+import VideoModal from './VideoModal'
+import VideoPreview from './VideoPreview'
 import YouTubeVideo from './YouTubeVideo'
 
 export {
   NavBar,
   MenuBar,
-  YouTubePreview,
-  YouTubeModal,
+  VideoPreview,
+  VideoModal,
   YouTubeVideo
 }
