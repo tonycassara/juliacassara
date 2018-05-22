@@ -27,6 +27,20 @@ h6 {
   color: #525252;
 }
 
+a {
+  text-decoration: none;
+  color: #525252;
+}
+
+a:hover {
+  color: black !important;
+  text-shadow: rgba(0,0,0,0.2) 1px 2px 2px;
+}
+
+a:visited {
+  color: #525252;
+}
+
 #main {
   position: relative;
 }
