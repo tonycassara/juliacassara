@@ -22,24 +22,24 @@ h1, h2, h3, h4, h5 {
 h6 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-weight: 200;
+  font-size: 0.6em;
+  font-weight: 700;
   letter-spacing: .15em;
   color: #525252;
 }
 
 a {
   text-decoration: none;
-  color: black;
-  transition: text-shadow 0.25s;
+  color: #525252;
+  transition: color 0.25s;
 }
 
 a:hover {
-  color: black;
-  text-shadow: #525252 3px 5px 30px;
+  color: rgba(82, 82, 82, 0.5) !important;
 }
 
 a:visited {
-  color: black;
+  color: #525252;
 }
 
 #main {
