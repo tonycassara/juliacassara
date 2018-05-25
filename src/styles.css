@@ -42,6 +42,10 @@ a:visited {
   color: #525252;
 }
 
+.antispam {
+  display: none;
+}
+
 #main {
   position: relative;
 }
@@ -86,13 +90,13 @@ a:visited {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 1em;
+  margin: 1em 10vw;
 }
 
 .video-pane {
   position: relative;
-  width: 28vw;
-  height: 40vh;
+  width: 20vw;
+  height: 36vh;
   margin: 1em;
   flex: 2 1 auto;
 }
