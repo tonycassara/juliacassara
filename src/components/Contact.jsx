@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import qs from 'querystring'
 import { NavBar } from '../components'
 
 class Contact extends React.Component {
@@ -6,10 +7,12 @@ class Contact extends React.Component {
     super(props)
     this.state = {
       name: '',
-      email: '',
+      replyTo: '',
       url: '',
       message: '',
+      showConfirmation: false,
     }
+    this.formatEmail = this.formatEmail.bind(this)
     this.processMessage = this.processMessage.bind(this)
     this.updateState = this.updateState.bind(this)
     this.validateForm = this.validateForm.bind(this)
@@ -32,8 +35,28 @@ class Contact extends React.Component {
     })
   }
 
-  processMessage() {
-    fetch()
+  formatEmail() {
+    return {
+      formDataNameOrder: { ...this.state },
+      formGoogleSheetName: 'responses',
+    }
+  }
+
+  async processMessage() {
+    const queryString = qs.stringify({
+      name: this.state.name,
+      replyTo: this.state.replyTo,
+      message: this.state.message,
+    })
+    const url = `https://script.google.com/macros/s/AKfycbxD8BIqu6cYPpGpSP2InJ5mOw5J8akAUgZ7Cahxdl09ziGVodM/exec?${queryString}`
+    try {
+      await fetch(url, { method: 'POST' })
+      this.setState({
+        showConfirmation: true
+      })
+    } catch (e) {
+      console.warn('Error: Unable to send message', e)
+    }
   }
 
   render() {
@@ -41,23 +64,21 @@ class Contact extends React.Component {
       <Fragment>
         <NavBar />
         <div className="contact">
-          <form onSubmit={this.validateForm}>
-            <label>
-              Name
-              <input type="text" name="name" value={this.state.name} onChange={this.updateState} required />
+          <form onSubmit={this.validateForm} className="contact-form">
+            <label className="form-row">
+              <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.updateState} required />
             </label>
-            <label>
-              Email
-              <input type="email" name="email" value={this.state.email} onChange={this.updateState} required />
+            <label className="form-row">
+              <input type="email" name="replyTo" placeholder="Email" value={this.state.replyTo} onChange={this.updateState} required />
             </label>
             <div className="antispam">Leave this empty: <input type="text" name="url" value={this.state.url} onChange={this.updateState} /></div>
-            <label>
-              Message
-              <textarea name="message" value={this.state.message} onChange={this.updateState} required />
+            <label className="form-row message">
+              <input name="message" placeholder="Message" value={this.state.message} onChange={this.updateState} required />
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className="submit" />
           </form>
         </div>
+        {this.state.showConfirmation ? <div className="sent">Message Sent!</div> : null}
       </Fragment>
     )
   }
