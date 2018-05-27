@@ -64,6 +64,7 @@ class Contact extends React.Component {
       <Fragment>
         <NavBar />
         <div className="contact">
+          {this.state.showConfirmation ? <div className="sent">Message Sent!</div> : null}
           <form onSubmit={this.validateForm} className="contact-form">
             <label className="form-row">
               <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.updateState} required />
@@ -78,7 +79,6 @@ class Contact extends React.Component {
             <input type="submit" value="Submit" className="submit" />
           </form>
         </div>
-        {this.state.showConfirmation ? <div className="sent">Message Sent!</div> : null}
       </Fragment>
     )
   }
