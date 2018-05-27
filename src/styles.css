@@ -1,19 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300');
 
 html {
   font-size: 20px;
 }
 
-body, p, li, ul, div, span {
-  font-family: 'Arvo', serif;
+body,
+p,
+li,
+ul,
+div,
+span {
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   background-color: #fafafa;
   margin: 0;
+  color: #525252;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   color: #525252;
@@ -24,7 +33,7 @@ h6 {
   text-transform: uppercase;
   font-size: 0.6em;
   font-weight: 700;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   color: #525252;
 }
 
@@ -48,6 +57,8 @@ a:visited {
 
 #main {
   position: relative;
+  width: 85vw;
+  margin: 0 auto;
 }
 
 #nav-bar {
@@ -62,7 +73,8 @@ a:visited {
   margin: 0 1vw;
 }
 
-#menu-bar > h6, #nav-bar > h1 {
+#menu-bar > h6,
+#nav-bar > h1 {
   display: inline-block;
 }
 
@@ -90,15 +102,14 @@ a:visited {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 1em 10vw;
 }
 
 .video-pane {
   position: relative;
-  width: 20vw;
-  height: 30vh;
+  width: 24vw;
+  height: calc(24vh * 1.4);
   margin: 1em;
-  flex: 2 1 auto;
+  flex: 1 1 auto;
 }
 
 .video-pane:hover {
@@ -139,13 +150,15 @@ a:visited {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#backdrop.hidden, #video-modal.hidden {
+#backdrop.hidden,
+#video-modal.hidden {
   opacity: 0;
   z-index: -100;
   transition: opacity 0.25s ease-out, z-index 0s 0.25s;
 }
 
-#backdrop.visible, #video-modal.visible {
+#backdrop.visible,
+#video-modal.visible {
   opacity: 1;
   z-index: 100;
   transition: opacity 0.25s ease-in;
@@ -153,7 +166,7 @@ a:visited {
 
 #video-modal {
   display: block;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -167,7 +180,7 @@ a:visited {
   width: 85vw;
   opacity: 0;
   height: 0;
-  transition: opacity .25s, height 0.5s;
+  transition: opacity 0.25s, height 0.5s;
 }
 
 #loading-icon {
@@ -197,7 +210,7 @@ a:visited {
   margin: 2vh 0;
 }
 
-.form-row>h6 {
+.form-row > h6 {
   margin: 0;
 }
 
@@ -205,15 +218,14 @@ a:visited {
   flex-direction: column;
 }
 
-.message>input {
+.message > input {
   width: 90%;
   height: 10vh;
   border-radius: 4px;
   border-color: transparent;
 }
 
-.message>input::placeholder {
-  
+.message > input::placeholder {
 }
 
 input {
@@ -231,7 +243,7 @@ input.submit {
 
 input.submit:hover {
   cursor: pointer;
-  box-shadow: rgba(0,0,0,0.2) 0px 0px 30px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 30px;
 }
 
 .sent {
@@ -250,10 +262,6 @@ input.submit:hover {
   }
   #menu-bar > h6 {
     margin: 1vh;
-  }
-  .video-embed {
-    width: 95vw;
-    height: calc(95vw / 1.777777777777);
   }
   .vide-grid {
     flex-direction: column;

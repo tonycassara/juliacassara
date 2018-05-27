@@ -1,8 +1,10 @@
 module.exports = {
-    "extends": "airbnb",
-    "rules": {
-      "semi": ["error", "never"],
-      "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-      "comma-dangle": ["warn", "only-multiline"]
-  }
-};
+  extends: ['prettier'],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+}

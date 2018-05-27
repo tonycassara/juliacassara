@@ -27,11 +27,13 @@ class Contact extends React.Component {
   }
 
   updateState(e) {
-    const { target: { name, value } } = e
+    const {
+      target: { name, value },
+    } = e
     const state = {}
     state[name] = value
     this.setState({
-      ...state
+      ...this.state,
     })
   }
 
@@ -52,7 +54,7 @@ class Contact extends React.Component {
     try {
       await fetch(url, { method: 'POST' })
       this.setState({
-        showConfirmation: true
+        showConfirmation: true,
       })
     } catch (e) {
       console.warn('Error: Unable to send message', e)
@@ -64,17 +66,47 @@ class Contact extends React.Component {
       <Fragment>
         <NavBar />
         <div className="contact">
-          {this.state.showConfirmation ? <div className="sent">Message Sent!</div> : null}
+          {this.state.showConfirmation ? (
+            <div className="sent">Message Sent!</div>
+          ) : null}
           <form onSubmit={this.validateForm} className="contact-form">
             <label className="form-row">
-              <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.updateState} required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={this.state.name}
+                onChange={this.updateState}
+                required
+              />
             </label>
             <label className="form-row">
-              <input type="email" name="replyTo" placeholder="Email" value={this.state.replyTo} onChange={this.updateState} required />
+              <input
+                type="email"
+                name="replyTo"
+                placeholder="Email"
+                value={this.state.replyTo}
+                onChange={this.updateState}
+                required
+              />
             </label>
-            <div className="antispam">Leave this empty: <input type="text" name="url" value={this.state.url} onChange={this.updateState} /></div>
+            <div className="antispam">
+              Leave this empty:{' '}
+              <input
+                type="text"
+                name="url"
+                value={this.state.url}
+                onChange={this.updateState}
+              />
+            </div>
             <label className="form-row message">
-              <input name="message" placeholder="Message" value={this.state.message} onChange={this.updateState} required />
+              <input
+                name="message"
+                placeholder="Message"
+                value={this.state.message}
+                onChange={this.updateState}
+                required
+              />
             </label>
             <input type="submit" value="Submit" className="submit" />
           </form>
