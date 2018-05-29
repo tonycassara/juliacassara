@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
 import { NavBar } from '../components'
+import julia from '../assets/julia.png'
 
 const AboutMe = () => (
   <Fragment>
     <NavBar />
     <div className="about">
-      <p>
+      <p className="about-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Odio eu feugiat
         pretium nibh. Mauris sit amet massa vitae tortor condimentum lacinia
@@ -19,6 +20,24 @@ const AboutMe = () => (
         id leo in vitae turpis massa. Amet massa vitae tortor condimentum
         lacinia.
       </p>
+      <img src={julia} className="headshot" />
+      <div className="client-grid">
+        <h3>Previous Clients</h3>
+        <div>Douglas</div>
+        <div>Foreo</div>
+        <div>La Roche-Posay</div>
+        <div>Rossman</div>
+        <div>Lifefactory</div>
+        <div>Kite hill</div>
+        <div>Beauty Skin</div>
+        <div>Remington</div>
+        <div>L’Oreal</div>
+        <div>beGLOSSY</div>
+        <div>Phidivps</div>
+        <div>Cappello’s</div>
+        <div>iHerb</div>
+        <div>Sephora</div>
+      </div>
     </div>
   </Fragment>
 )

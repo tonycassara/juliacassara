@@ -189,6 +189,43 @@ a:visited {
   fill: pink;
 }
 
+.about-text {
+  grid-area: p;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headshot {
+  grid-area: h;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about {
+  display: grid;
+  width: 65vw;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'p p h' 'c c c';
+  grid-gap: 1em;
+}
+
+.client-grid {
+  grid-area: c;
+  margin-top: 4vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.client-grid > div,
+.client-grid > h3 {
+  margin: auto;
+}
+
 .contact {
   width: 80vw;
   margin: auto;
@@ -263,10 +300,24 @@ input.submit:hover {
   #menu-bar > h6 {
     margin: 1vh;
   }
-  .vide-grid {
+  .video-grid {
     flex-direction: column;
   }
   .video-pane {
     width: 90vw;
+    height: calc(26vh * 1.4);
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .about {
+    width: 85vw;
+    grid-template-areas:
+      'h h h'
+      'p p p'
+      'c c c';
+  }
+  .headshot {
+    max-width: 50vw;
   }
 }
