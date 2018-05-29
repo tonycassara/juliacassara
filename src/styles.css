@@ -208,7 +208,7 @@ a:visited {
   width: 65vw;
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: 'p p h' 'c c c';
+  grid-template-areas: 'p p h' 't t t' 'c c c';
   grid-gap: 1em;
 }
 
@@ -226,8 +226,13 @@ a:visited {
   margin: auto;
 }
 
+.client-grid > h3 {
+  grid-area: t;
+}
+
 .client-grid > img {
   width: 50%;
+  filter: grayscale(1);
 }
 
 .contact {

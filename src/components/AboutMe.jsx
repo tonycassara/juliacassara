@@ -37,8 +37,8 @@ const AboutMe = () => (
         lacinia.
       </p>
       <img src={julia} className="headshot" />
+      <h3>Previous Clients</h3>
       <div className="client-grid">
-        <h3>Previous Clients</h3>
         <img src={larocheposay} alt="La Roche-Posay" />
         <img src={kitehill} alt="Kite Hill" />
         <img src={beautyskin} alt="BeautySkin" />
