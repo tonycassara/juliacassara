@@ -221,9 +221,13 @@ a:visited {
   grid-gap: 2em;
 }
 
-.client-grid > div,
+.client-grid > img,
 .client-grid > h3 {
   margin: auto;
+}
+
+.client-grid > img {
+  width: 50%;
 }
 
 .contact {

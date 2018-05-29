@@ -1,6 +1,22 @@
 import React, { Fragment } from 'react'
+import createReactClass from 'create-react-class'
 import { NavBar } from '../components'
+// import svgMaker from '../helpers/svgMaker'
 import julia from '../assets/julia.png'
+import beautyskin from '../assets/logos/beautyskin.png'
+import cappellos from '../assets/logos/cappellos.svg'
+import douglas from '../assets/logos/douglas.svg'
+import foreo from '../assets/logos/foreo.svg'
+import glossybox from '../assets/logos/glossybox.svg'
+import iherb from '../assets/logos/iherb.svg'
+import kitehill from '../assets/logos/kitehill.png'
+import larocheposay from '../assets/logos/larocheposay.png'
+import lifefactory from '../assets/logos/lifefactory.svg'
+import loreal from '../assets/logos/loreal.svg'
+import philips from '../assets/logos/philips.svg'
+import remington from '../assets/logos/remington.png'
+import rossman from '../assets/logos/rossman.svg'
+import sephora from '../assets/logos/sephora.svg'
 
 const AboutMe = () => (
   <Fragment>
@@ -23,20 +39,20 @@ const AboutMe = () => (
       <img src={julia} className="headshot" />
       <div className="client-grid">
         <h3>Previous Clients</h3>
-        <div>Douglas</div>
-        <div>Foreo</div>
-        <div>La Roche-Posay</div>
-        <div>Rossman</div>
-        <div>Lifefactory</div>
-        <div>Kite hill</div>
-        <div>Beauty Skin</div>
-        <div>Remington</div>
-        <div>L’Oreal</div>
-        <div>beGLOSSY</div>
-        <div>Phidivps</div>
-        <div>Cappello’s</div>
-        <div>iHerb</div>
-        <div>Sephora</div>
+        <img src={larocheposay} alt="La Roche-Posay" />
+        <img src={kitehill} alt="Kite Hill" />
+        <img src={beautyskin} alt="BeautySkin" />
+        <img src={remington} alt="Remington" />
+        {/* <img src={douglas} alt="Douglas"></img>
+        <img src={foreo} alt="Foreo"></img>
+        <img src={rossman} alt="Rossman"></img>
+        <img src={lifefactory} alt="Lifefactory"></img>
+        <img src={loreal} alt="L’Oreal"></img>
+        <img src={glossybox} alt="GlossyBox"></img>
+        <img src={philips} alt="Philips"></img>
+        <img src={cappellos} alt="Cappello’s"></img>
+        <img src={iherb} alt="iHerb"></img>
+        <img src={sephora} alt="Sephora"></img> */}
       </div>
     </div>
   </Fragment>
