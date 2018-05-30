@@ -6,6 +6,7 @@ class Contact extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      disabled: false,
       name: '',
       replyTo: '',
       url: '',
@@ -33,7 +34,7 @@ class Contact extends React.Component {
     const state = {}
     state[name] = value
     this.setState({
-      ...this.state,
+      ...state,
     })
   }
 
@@ -54,6 +55,7 @@ class Contact extends React.Component {
     try {
       await fetch(url, { method: 'POST' })
       this.setState({
+        disabled: true,
         showConfirmation: true,
       })
     } catch (e) {
@@ -67,7 +69,7 @@ class Contact extends React.Component {
         <NavBar />
         <div className="contact">
           {this.state.showConfirmation ? (
-            <div className="sent">Message Sent!</div>
+            <h6 className="sent">Message Sent!</h6>
           ) : null}
           <form onSubmit={this.validateForm} className="contact-form">
             <label className="form-row">
@@ -108,7 +110,12 @@ class Contact extends React.Component {
                 required
               />
             </label>
-            <input type="submit" value="Submit" className="submit" />
+            <input
+              type="submit"
+              value="Submit"
+              className="submit"
+              disabled={this.state.disabled}
+            />
           </form>
         </div>
       </Fragment>

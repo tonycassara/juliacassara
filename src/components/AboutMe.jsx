@@ -4,55 +4,59 @@ import { NavBar } from '../components'
 // import svgMaker from '../helpers/svgMaker'
 import julia from '../assets/julia.png'
 import beautyskin from '../assets/logos/beautyskin.png'
-import cappellos from '../assets/logos/cappellos.svg'
-import douglas from '../assets/logos/douglas.svg'
-import foreo from '../assets/logos/foreo.svg'
-import glossybox from '../assets/logos/glossybox.svg'
-import iherb from '../assets/logos/iherb.svg'
+import Cappellos from '../assets/logos/cappellos.svg'
+import Douglas from '../assets/logos/douglas.svg'
+import Foreo from '../assets/logos/foreo.svg'
+import Glossybox from '../assets/logos/glossybox.svg'
+import Iherb from '../assets/logos/iherb.svg'
 import kitehill from '../assets/logos/kitehill.png'
 import larocheposay from '../assets/logos/larocheposay.png'
-import lifefactory from '../assets/logos/lifefactory.svg'
-import loreal from '../assets/logos/loreal.svg'
-import philips from '../assets/logos/philips.svg'
+import Lifefactory from '../assets/logos/lifefactory.svg'
+import Loreal from '../assets/logos/loreal.svg'
+import philips from '../assets/logos/philips.png'
 import remington from '../assets/logos/remington.png'
-import rossman from '../assets/logos/rossman.svg'
-import sephora from '../assets/logos/sephora.svg'
+import revlon from '../assets/logos/revlon.png'
+import rossman from '../assets/logos/rossman.png'
+import Sephora from '../assets/logos/sephora.svg'
 
 const AboutMe = () => (
   <Fragment>
     <NavBar />
     <div className="about">
-      <p className="about-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Odio eu feugiat
-        pretium nibh. Mauris sit amet massa vitae tortor condimentum lacinia
-        quis vel. Orci porta non pulvinar neque laoreet suspendisse interdum
-        consectetur. Aliquam ultrices sagittis orci a scelerisque. Faucibus
-        vitae aliquet nec ullamcorper sit amet risus. Purus viverra accumsan in
-        nisl nisi scelerisque eu ultrices vitae. Sed risus ultricies tristique
-        nulla aliquet enim. Vel quam elementum pulvinar etiam non quam lacus
-        suspendisse faucibus. Ullamcorper dignissim cras tincidunt lobortis
-        feugiat vivamus. Accumsan lacus vel facilisis volutpat est. Lectus quam
-        id leo in vitae turpis massa. Amet massa vitae tortor condimentum
-        lacinia.
-      </p>
+      <div className="about-text">
+        <h3>I’m Julia</h3>
+        <p>
+          A videographer creating high quality video content for online
+          platforms. Since 2013 I’ve been creating content for my blog with
+          YouTube as my primary platform. I’ve worked with companies such as
+          L’Oreal, La Roche-Posay, and Sephora to help create stunning digital
+          content to inspire and inform millions of viewers across the globe.
+        </p>
+        <h6>Technical Skills:</h6>
+        <div>
+          <ul>Final Cut Pro, Adobe Premiere, Photoshop, Lightroom</ul>
+          <ul>Directing, Recording, Editing, Cut-Downs</ul>
+          <ul>Color Correcting, Touch-ups, Cross-Platform Content</ul>
+        </div>
+      </div>
       <img src={julia} className="headshot" />
       <h3>Previous Clients</h3>
       <div className="client-grid">
         <img src={larocheposay} alt="La Roche-Posay" />
+        <Loreal />
+        <img src={philips} alt="Philips" />
+        <Sephora />
+        <Foreo />
+        <img src={revlon} alt="Revlon" />
         <img src={kitehill} alt="Kite Hill" />
-        <img src={beautyskin} alt="BeautySkin" />
         <img src={remington} alt="Remington" />
-        {/* <img src={douglas} alt="Douglas"></img>
-        <img src={foreo} alt="Foreo"></img>
-        <img src={rossman} alt="Rossman"></img>
-        <img src={lifefactory} alt="Lifefactory"></img>
-        <img src={loreal} alt="L’Oreal"></img>
-        <img src={glossybox} alt="GlossyBox"></img>
-        <img src={philips} alt="Philips"></img>
-        <img src={cappellos} alt="Cappello’s"></img>
-        <img src={iherb} alt="iHerb"></img>
-        <img src={sephora} alt="Sephora"></img> */}
+        <Douglas />
+        <Iherb />
+        <Lifefactory />
+        <Glossybox />
+        <Cappellos />
+        <img src={rossman} alt="Rossman" />
+        <img src={beautyskin} alt="BeautySkin" />
       </div>
     </div>
   </Fragment>
