@@ -109,7 +109,7 @@ a:visited {
 .video-pane {
   position: relative;
   width: 100%;
-  height: calc(24vh * 1.4);
+  height: calc(20vh * 1.4);
 }
 
 .video-pane:hover {
@@ -346,6 +346,6 @@ input.submit:hover {
   }
   .video-pane {
     width: 100%;
-    height: calc(26vh * 1.4);
+    height: calc(22vh * 1.4);
   }
 }

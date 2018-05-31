@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { NavBar, VideoPreview, VideoModal, YouTubeVideo } from '../components'
+import videoList from '../data/videoList'
 
 /* global document */
 
@@ -9,17 +10,17 @@ class VideoGrid extends React.Component {
     this.state = {
       modalVisible: false,
       selectedVideo: '',
-      videoList: new Array(9).fill(
-        {
-          video: 'https://www.youtube.com/embed/bhtFtc1dqqw??hd=1&modestbranding=0&autohide=1&showinfo=0&controls=1&showsearch=0',
-          img: 'https://img.youtube.com/vi/bhtFtc1dqqw/maxresdefault.jpg'
-        },
-        0,
-        9
-      )
+      videoList: [],
     }
     this.toggleModal = this.toggleModal.bind(this)
     this.toggleModalClass = this.toggleModalClass.bind(this)
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (state.videoList.length === 0) {
+      return { videoList }
+    }
+    return null
   }
 
   toggleModalClass() {
@@ -42,20 +43,14 @@ class VideoGrid extends React.Component {
   }
 
   render() {
-    const videoGrid = this.state.videoList.map(video =>
-      (<VideoPreview
-        video={video}
-        toggleModal={this.toggleModal}
-      />))
+    const videoGrid = this.state.videoList.map(video => (
+      <VideoPreview video={video} toggleModal={this.toggleModal} />
+    ))
     return (
       <div id="main">
         <NavBar />
-        <div className="video-grid">
-          {videoGrid}
-        </div>
-        <VideoModal
-          modalVisible={this.state.modalVisible}
-        >
+        <div className="video-grid">{videoGrid}</div>
+        <VideoModal modalVisible={this.state.modalVisible}>
           <YouTubeVideo
             modalVisible={this.state.modalVisible}
             toggleModal={this.toggleModal}
