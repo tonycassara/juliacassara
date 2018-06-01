@@ -45,7 +45,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'assets/',
+              // outputPath: 'assets/', // causing issues with facebook image scraping
             },
           },
         ],
