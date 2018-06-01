@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import qs from 'querystring'
-import { NavBar } from '../components'
+import { Footer, NavBar } from '../components'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -118,6 +118,7 @@ class Contact extends React.Component {
             />
           </form>
         </div>
+        <Footer />
       </Fragment>
     )
   }

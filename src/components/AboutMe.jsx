@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import createReactClass from 'create-react-class'
-import { NavBar } from '../components'
+import { Footer, NavBar } from '../components'
 // import svgMaker from '../helpers/svgMaker'
 import julia from '../assets/julia.png'
 import beautyskin from '../assets/logos/beautyskin.png'
 import Cappellos from '../assets/logos/cappellos.svg'
 import Douglas from '../assets/logos/douglas.svg'
 import Foreo from '../assets/logos/foreo.svg'
-import Glossybox from '../assets/logos/glossybox.svg'
+import google from '../assets/logos/google.png'
 import Iherb from '../assets/logos/iherb.svg'
 import kitehill from '../assets/logos/kitehill.png'
 import larocheposay from '../assets/logos/larocheposay.png'
@@ -26,11 +26,12 @@ const AboutMe = () => (
       <div className="about-text">
         <h3>I’m Julia</h3>
         <p>
-          A videographer creating high quality video content for online
-          platforms. Since 2013 I’ve been creating content for my blog with
-          YouTube as my primary platform. I’ve worked with companies such as
-          L’Oreal, La Roche-Posay, and Sephora to help create stunning digital
-          content to inspire and inform millions of viewers across the globe.
+          A video editor, colorist, and producer creating high quality video
+          content for online platforms. Since 2010 I’ve been creating content
+          for my blog with YouTube as my primary platform. I’ve worked with
+          companies such as L’Oreal, La Roche-Posay, and Sephora to help create
+          stunning digital content to inspire and inform millions of viewers
+          across the globe.
         </p>
         <h6>Technical Skills:</h6>
         <div>
@@ -53,12 +54,13 @@ const AboutMe = () => (
         <Douglas />
         <Iherb />
         <Lifefactory />
-        <Glossybox />
+        <img src={google} alt="Google" />
         <Cappellos />
         <img src={rossman} alt="Rossman" />
         <img src={beautyskin} alt="BeautySkin" />
       </div>
     </div>
+    <Footer />
   </Fragment>
 )
 

@@ -1,5 +1,11 @@
 import React, { Fragment } from 'react'
-import { NavBar, VideoPreview, VideoModal, YouTubeVideo } from '../components'
+import {
+  Footer,
+  NavBar,
+  VideoPreview,
+  VideoModal,
+  YouTubeVideo,
+} from '../components'
 import videoList from '../data/videoList'
 
 /* global document */
@@ -10,17 +16,10 @@ class VideoGrid extends React.Component {
     this.state = {
       modalVisible: false,
       selectedVideo: '',
-      videoList: [],
+      videoList,
     }
     this.toggleModal = this.toggleModal.bind(this)
     this.toggleModalClass = this.toggleModalClass.bind(this)
-  }
-
-  static getDerivedStateFromProps(props, state) {
-    if (state.videoList.length === 0) {
-      return { videoList }
-    }
-    return null
   }
 
   toggleModalClass() {
@@ -57,6 +56,7 @@ class VideoGrid extends React.Component {
             video={this.state.selectedVideo}
           />
         </VideoModal>
+        <Footer />
       </div>
     )
   }

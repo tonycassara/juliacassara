@@ -3,6 +3,8 @@ const path = require('path')
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
+  filename: 'index.html',
+  favicon: 'src/assets/favicon.jpg',
   css: ['./src/style.css'],
 })
 
@@ -42,7 +44,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {},
+            options: {
+              outputPath: 'assets/',
+            },
           },
         ],
       },

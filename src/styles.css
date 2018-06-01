@@ -37,6 +37,12 @@ h6 {
   color: #525252;
 }
 
+footer {
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+}
+
 ul {
   padding-left: 0;
 }
@@ -109,7 +115,7 @@ a:visited {
 .video-pane {
   position: relative;
   width: 100%;
-  height: calc(20vh * 1.4);
+  height: calc(((85vw - 2em) / 3) / 1.7777777);
 }
 
 .video-pane:hover {
@@ -223,6 +229,7 @@ a:visited {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(5, 100px); */
   grid-gap: 2em;
 }
 
@@ -329,11 +336,16 @@ input.submit:hover {
   .client-grid {
     grid-gap: 0;
   }
+  .video-pane {
+    position: relative;
+    width: 100%;
+    height: calc(((85vw - 2em) / 2) / 1.7777777);
+  }
 }
 
 @media only screen and (max-width: 600px) {
   #nav-bar {
-    margin: 1em 1em 1em 3em;
+    margin: 1em 1em 1em 2em;
   }
   #menu-bar {
     display: grid;
@@ -346,6 +358,6 @@ input.submit:hover {
   }
   .video-pane {
     width: 100%;
-    height: calc(22vh * 1.4);
+    height: calc(85vw / 1.7777777);
   }
 }
