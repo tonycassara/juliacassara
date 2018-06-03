@@ -23,10 +23,8 @@
     "precommit": "lint-staged",
     "prod": "run-s prod:*",
     "prod:rimraf": "rm -rf dist/*",
-    "prod:build": "run-s prod:build:*",
-    "prod:build:server": "babel ./src/server.js -o ./dist/server.js",
-    "prod:build:pack": "webpack --mode production",
-    "prod:start": "node dist/server.js"
+    "prod:pack": "webpack --mode production",
+    "prod:start": "node src/server.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

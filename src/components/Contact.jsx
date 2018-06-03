@@ -102,7 +102,7 @@ class Contact extends React.Component {
               />
             </div>
             <label className="form-row message">
-              <input
+              <textarea
                 name="message"
                 placeholder="Message"
                 value={this.state.message}
