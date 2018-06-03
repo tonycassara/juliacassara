@@ -36,7 +36,7 @@ const AboutMe = () => (
         <h6>Technical Skills:</h6>
         <div>
           <ul>Final Cut Pro, Adobe Premiere, Photoshop, Lightroom</ul>
-          <ul>Directing, Recording, Editing, Cut-Downs</ul>
+          <ul>Directing, Recording, Editing, Cut-Downs, Audio Mixing</ul>
           <ul>Color Correcting, Touch-ups, Cross-Platform Content</ul>
         </div>
       </div>

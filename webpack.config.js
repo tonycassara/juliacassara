@@ -1,11 +1,17 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: './src/index.html',
+  template: 'src/index.html',
   filename: 'index.html',
   favicon: 'src/assets/favicon.jpg',
-  css: ['./src/style.css'],
+  css: ['src/styles.css'],
+})
+
+const uglifyPlugin = new UglifyJsPlugin({
+  cache: true,
+  parallel: true,
 })
 
 module.exports = {
@@ -23,7 +29,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { minimize: true } },
+        ],
       },
       {
         test: /\.svg$/,
@@ -55,5 +64,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
-  plugins: [htmlPlugin],
+  plugins: [htmlPlugin, uglifyPlugin],
 }
