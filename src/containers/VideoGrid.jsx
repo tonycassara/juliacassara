@@ -8,7 +8,8 @@ import {
 } from '../components'
 import LoadingIcon from '../assets/LoadingIcon'
 import formatYouTubeLink from '../helpers/formatYouTubeLink'
-// import videoList from '../data/videoList'
+
+// import videoList from '../data/videoList' // use for testing video grid offline
 
 /* global document */
 
@@ -34,6 +35,7 @@ class VideoGrid extends React.Component {
 
   async getVideoList() {
     const videoListFetch = await fetch(
+      // google spreadsheet where users with access can change the order and links to videos
       'https://script.google.com/macros/s/AKfycbyQDYZlgiqWUTXnZ80iTBpSU1666VXrrH7-jLR09Ldhknaq2LGt/exec'
     )
     const videoListBlob = await videoListFetch.json()
