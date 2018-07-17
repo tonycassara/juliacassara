@@ -112,8 +112,10 @@ a:visited {
 .video-pane {
   position: relative;
   width: 100%;
+  opacity: 0;
   height: calc(((85vw - 2em) / 3) / 1.7777777);
   animation: 450ms ease-out slideUp;
+  animation-fill-mode: forwards;
 }
 
 .video-pane:hover {
@@ -130,7 +132,7 @@ a:visited {
 
 @keyframes slideUp {
   0% {
-    transform: translateY(15%);
+    transform: translateY(25%);
     opacity: 0;
   }
   100% {
@@ -244,14 +246,13 @@ a:visited {
 }
 
 .client-grid > img,
-.client-grid > svg,
-.about > h3 {
+.client-grid > svg {
   margin: auto;
 }
 
 .about > h3 {
   grid-area: t;
-  margin-bottom: 0;
+  margin-bottom: auto;
 }
 
 .client-grid > img,
@@ -348,7 +349,8 @@ input.submit:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .client-grid {
-    grid-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 0; */
   }
   .video-pane {
     position: relative;

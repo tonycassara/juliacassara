@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
 import createReactClass from 'create-react-class'
 import { Footer, NavBar } from '../components'
-// import svgMaker from '../helpers/svgMaker'
 import julia from '../assets/julia.png'
+import almay from '../assets/logos/almay.png'
+import AmericanEagle from '../assets/logos/americaneagle.svg'
 import beautyskin from '../assets/logos/beautyskin.png'
 import Cappellos from '../assets/logos/cappellos.svg'
 import Douglas from '../assets/logos/douglas.svg'
@@ -13,6 +14,7 @@ import kitehill from '../assets/logos/kitehill.png'
 import larocheposay from '../assets/logos/larocheposay.png'
 import Lifefactory from '../assets/logos/lifefactory.svg'
 import Loreal from '../assets/logos/loreal.svg'
+import maybelline from '../assets/logos/maybelline.png'
 import philips from '../assets/logos/philips.png'
 import remington from '../assets/logos/remington.png'
 import revlon from '../assets/logos/revlon.png'
@@ -35,17 +37,19 @@ const AboutMe = () => (
         </p>
         <h6>Technical Skills:</h6>
         <div>
-          <ul>Final Cut Pro, Adobe Premiere, Photoshop, Lightroom</ul>
-          <ul>Directing, Recording, Editing, Cut-Downs, Audio Mixing</ul>
-          <ul>Color Correcting, Touch-ups, Cross-Platform Content</ul>
+          <li>Final Cut Pro, Adobe Premiere, Photoshop, Lightroom</li>
+          <li>Directing, Recording, Editing, Cut-Downs, Audio Mixing</li>
+          <li>Color Correcting, Touch-ups, Cross-Platform Content</li>
         </div>
       </div>
       <img src={julia} className="headshot" />
       <h3>Previous Clients</h3>
       <div className="client-grid">
         <img src={larocheposay} alt="La Roche-Posay" />
+        <AmericanEagle />
+        <img src={maybelline} alt="Maybelline" />
+        <img src={almay} alt="Almay" />
         <Loreal />
-        <img src={philips} alt="Philips" />
         <Sephora />
         <Foreo />
         <img src={revlon} alt="Revlon" />
@@ -58,6 +62,7 @@ const AboutMe = () => (
         <Cappellos />
         <img src={rossman} alt="Rossman" />
         <img src={beautyskin} alt="BeautySkin" />
+        <img src={philips} alt="Philips" />
       </div>
     </div>
     <Footer />

@@ -9,7 +9,7 @@ import {
 import LoadingIcon from '../assets/LoadingIcon'
 import formatYouTubeLink from '../helpers/formatYouTubeLink'
 
-// import videoList from '../data/videoList' // use for testing video grid offline
+import videoList from '../data/videoList' // faster load time
 
 /* global document */
 
@@ -19,29 +19,32 @@ class VideoGrid extends React.Component {
     this.state = {
       modalVisible: false,
       selectedVideo: '',
+      videoList,
     }
-    this.getVideoList = this.getVideoList.bind(this)
+    // this.getVideoList = this.getVideoList.bind(this)
     this.toggleModal = this.toggleModal.bind(this)
     this.toggleModalClass = this.toggleModalClass.bind(this)
   }
 
-  async componentDidMount() {
-    const videoList = await this.getVideoList()
-    this.setState({
-      ...this.state,
-      videoList,
-    })
-  }
+  // for using remote video list, slower load time
 
-  async getVideoList() {
-    const videoListFetch = await fetch(
-      // google spreadsheet where users with access can change the order and links to videos
-      'https://script.google.com/macros/s/AKfycbyQDYZlgiqWUTXnZ80iTBpSU1666VXrrH7-jLR09Ldhknaq2LGt/exec'
-    )
-    const videoListBlob = await videoListFetch.json()
-    const videoList = videoListBlob.map(url => formatYouTubeLink(url[0]))
-    return videoList
-  }
+  // async componentDidMount() {
+  //   const videoList = await this.getVideoList()
+  //   this.setState({
+  //     ...this.state,
+  //     videoList,
+  //   })
+  // }
+  //
+  // async getVideoList() {
+  //   const videoListFetch = await fetch(
+  //     // google spreadsheet where users with access can change the order and links to videos
+  //     'https://script.google.com/macros/s/AKfycbyQDYZlgiqWUTXnZ80iTBpSU1666VXrrH7-jLR09Ldhknaq2LGt/exec'
+  //   )
+  //   const videoListBlob = await videoListFetch.json()
+  //   const videoList = videoListBlob.map(url => formatYouTubeLink(url[0]))
+  //   return videoList
+  // }
 
   toggleModalClass() {
     const videoModal = document.getElementById('video-modal')
@@ -85,9 +88,7 @@ class VideoGrid extends React.Component {
               height: '20vh',
               width: 'auto',
             }}
-          >
-            Loading...
-          </div>
+          />
         )}
         <VideoModal modalVisible={this.state.modalVisible}>
           <YouTubeVideo

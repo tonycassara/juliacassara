@@ -3,7 +3,11 @@ import propTypes from 'prop-types'
 
 const VideoPreview = ({ video: { video, img }, toggleModal }) => (
   // eslint-disable-next-line
-  <div className="video-pane" onClick={() => toggleModal(video)}>
+  <div
+    className="video-pane"
+    onClick={() => toggleModal(video)}
+    style={{ animationDelay: `${Math.random() * 500}ms` }}
+  >
     <img alt="ok" src={img} className="video-screenshot" />
     <svg width="100%" height="100%" viewBox="0 0 24 24" className="play-icon">
       <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
