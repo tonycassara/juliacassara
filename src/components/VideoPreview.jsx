@@ -6,7 +6,9 @@ const VideoPreview = ({ video: { video, img }, toggleModal }) => (
   <div
     className="video-pane"
     onClick={() => toggleModal(video)}
-    style={{ animationDelay: `${Math.random() * 500}ms` }}
+    style={{
+      animation: `450ms ease-out slideUp ${Math.random() * 500}ms forwards`,
+    }}
   >
     <img alt="ok" src={img} className="video-screenshot" />
     <svg width="100%" height="100%" viewBox="0 0 24 24" className="play-icon">

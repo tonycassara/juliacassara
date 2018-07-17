@@ -114,8 +114,6 @@ a:visited {
   width: 100%;
   opacity: 0;
   height: calc(((85vw - 2em) / 3) / 1.7777777);
-  animation: 450ms ease-out slideUp;
-  animation-fill-mode: forwards;
 }
 
 .video-pane:hover {
