@@ -13,6 +13,8 @@ import videoList from '../data/videoList' // faster load time
 
 /* global document */
 
+// TODO: Make grid container <ul> and all children <li> for easier debugging
+
 class VideoGrid extends React.Component {
   constructor(props) {
     super(props)
