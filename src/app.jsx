@@ -10,7 +10,7 @@ const App = () => (
       <Route path="/portfolio" component={VideoGrid} />
       <Route path="/about-me" component={AboutMe} />
       <Route path="/contact" component={Contact} />
-      <Route component={DemoReel} />
+      <Route path="*" component={VideoGrid} />
     </Switch>
   </div>
 )
