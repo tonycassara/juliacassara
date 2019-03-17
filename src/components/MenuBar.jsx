@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const MenuBar = () => (
   <div id="menu-bar">
-    <h6>
+    {/* <h6>
       <Link to="/demo-reel">Demo Reel</Link>
-    </h6>
+    </h6> */}
     <h6>
       <Link to="/portfolio">Portfolio</Link>
     </h6>
