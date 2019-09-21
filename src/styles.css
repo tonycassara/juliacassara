@@ -128,10 +128,12 @@ a:visited {
   width: 100%;
   opacity: 0;
   height: calc(((85vw - 2em) / 3) / 1.7777777);
+  cursor: pointer;
+  transition: margin 250ms ease;
 }
 
 .video-pane:hover {
-  cursor: pointer;
+  margin: -5px 0 0;
 }
 
 .video-pane:hover > svg > path {
@@ -156,6 +158,9 @@ a:visited {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
