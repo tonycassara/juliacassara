@@ -364,6 +364,16 @@ input.submit:hover {
   border-radius: 1em;
 }
 
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 960px) {
   #headshot {
     max-width: 50vw;
