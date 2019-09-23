@@ -4,6 +4,7 @@ import DemoReel from './DemoReel'
 import Footer from './Footer'
 import NavBar from './NavBar'
 import MenuBar from './MenuBar'
+import Photo from './Photo'
 import VideoModal from './VideoModal'
 import VideoPreview from './VideoPreview'
 import YouTubeVideo from './YouTubeVideo'
@@ -15,6 +16,7 @@ export {
   Footer,
   NavBar,
   MenuBar,
+  Photo,
   VideoPreview,
   VideoModal,
   YouTubeVideo,
