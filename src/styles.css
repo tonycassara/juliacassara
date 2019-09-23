@@ -301,30 +301,45 @@ a:visited {
 }
 
 .form-row {
+  border: 1px solid black;
+  height: 6vh;
+  background: white;
 }
 
 .form-row > h6 {
   margin: 0;
 }
 
-.message > textarea {
-  border-radius: 3px;
-  border-color: transparent;
-  width: 100%;
-  height: 100%;
-  font-size: 0.7em;
-  font-family: Montserrat, sans-serif;
-  width: 100%;
+.message {
   height: 20vh;
 }
 
-input {
-  border-radius: 3px;
-  border-color: transparent;
+.message > textarea {
   width: 100%;
   height: 100%;
   font-size: 0.7em;
   font-family: Montserrat, sans-serif;
+  height: 20vh;
+  border: none;
+  padding: 0;
+  resize: none;
+}
+
+input {
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 0.7em;
+  font-family: Montserrat, sans-serif;
+}
+
+input::placeholder {
+  padding: 0 0 0 10px;
+}
+
+textarea::placeholder {
+  padding: 10px 0 0 10px;
 }
 
 input.submit {
@@ -333,6 +348,7 @@ input.submit {
   font-family: 'Montserrat', sans-serif;
   transition: box-shadow 250ms;
   margin-left: auto;
+  border: 1px solid black;
 }
 
 input.submit:hover {

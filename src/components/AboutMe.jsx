@@ -7,8 +7,8 @@ import beautyskin from '../assets/logos/beautyskin.png'
 import Cappellos from '../assets/logos/cappellos.svg'
 import Douglas from '../assets/logos/douglas.svg'
 import Foreo from '../assets/logos/foreo.svg'
-import google from '../assets/logos/google.png'
 import Iherb from '../assets/logos/iherb.svg'
+import KateSpade from '../assets/logos/katespade.svg'
 import kitehill from '../assets/logos/kitehill.png'
 import larocheposay from '../assets/logos/larocheposay.png'
 import Lifefactory from '../assets/logos/lifefactory.svg'
@@ -46,12 +46,11 @@ class AboutMe extends React.Component {
           <div className="about-text">
             <h3>I’m Julia</h3>
             <p>
-              A video editor, colorist, and producer creating high quality video
-              content for online platforms. Since 2010 I’ve been creating
-              content for my blog with YouTube as my primary platform. I’ve
-              worked with companies such as L’Oreal, La Roche-Posay, and Sephora
-              to help create stunning digital content to inspire and inform
-              millions of viewers across the globe.
+              A digital content producer creating high quality video content for
+              online platforms since 2013. I’ve worked with companies such as
+              L’Oreal, Clinique, La Roche-Posay, and Sephora to help create
+              digital content to inspire and inform millions of viewers across
+              the globe.
             </p>
             <h6>Technical Skills:</h6>
             <div>
@@ -81,7 +80,7 @@ class AboutMe extends React.Component {
             <Douglas />
             <Iherb />
             <Lifefactory />
-            <img src={google} alt="Google" />
+            <KateSpade />
             <Cappellos />
             <img src={rossman} alt="Rossman" />
             <img src={beautyskin} alt="BeautySkin" />
