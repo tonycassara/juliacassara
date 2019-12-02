@@ -1,15 +1,15 @@
 import formatYouTubeLink from '../helpers/formatYouTubeLink'
 
 const videoUrls = [
-  'https://www.youtube.com/watch?v=zRy2tlXqshk', // keratin
-  'https://www.youtube.com/watch?v=_jQFQbUGeuk', // boba
-  'https://www.youtube.com/watch?v=RG_Tse0xijw', // niacinamide
-  'https://www.youtube.com/watch?v=SbW3kctZk04', // Article Ad | Insta Story | Grayson Living
-  'https://www.youtube.com/watch?v=ObiupEsW040', // Grayson Luxury | ver 4 Versace
+  'https://www.youtube.com/watch?v=SPYdF35acIQ', // Grayson Luxury x Christopher Guy
+  'https://www.youtube.com/watch?v=nUg9frbE5vY', // Grayson Living | Luxury Home Decor
+  'https://www.youtube.com/watch?v=a1j8tnRshMQ', // How I Got My First Job as a Programmer (with no experience)
+  'https://www.youtube.com/watch?v=u-5y3fFdo_c', // Instagram Story Ad | Grayson Luxury | Design Your Dream Home
+  'https://www.youtube.com/watch?v=ObiupEsW040', // The Sample Sale | Instagram Story Ad | Grayson Luxury | Versace Home
   'https://www.youtube.com/watch?v=OKDacj33lSM', // Bernhardt Story Post
-  'https://www.youtube.com/watch?v=XZxPO1hZSuQ', // Should You Go To A Coding Bootcamp
-  'https://www.youtube.com/watch?v=KjjfC_dqHTo', // Audio Technica ATH-M50xBT
-  'https://www.youtube.com/watch?v=4Y1v9heACD8', // Why can't code bootcamp grads find jobs?
+  'https://www.youtube.com/watch?v=aE6bMyUF4bg', // Beekeeper's Naturals
+  'https://www.youtube.com/watch?v=Sj3SMgfqKd4', // Grayson Living | Black Friday 2019 | IGTV
+  'https://www.youtube.com/watch?v=zRy2tlXqshk', // keratin
 ]
 
 const videoList = videoUrls.map(vid => formatYouTubeLink(vid))
