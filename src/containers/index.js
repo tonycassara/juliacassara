@@ -1,3 +1,3 @@
-import videoGrid from './videoGrid'
+import VideoGrid from './VideoGrid'
 
-export default videoGrid
+export default VideoGrid
