@@ -10,6 +10,15 @@ const MenuBar = () => (
       <Link to="/portfolio">Portfolio</Link>
     </h6>
     <h6>
+      <a
+        href="https://vimeo.com/itsjulia"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Vimeo
+      </a>
+    </h6>
+    <h6>
       <Link to="/photo">Photo</Link>
     </h6>
     <h6>
