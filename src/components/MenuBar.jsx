@@ -18,9 +18,9 @@ const MenuBar = () => (
         Vimeo
       </a>
     </h6>
-    <h6>
+    {/* <h6>
       <Link to="/photo">Photo</Link>
-    </h6>
+    </h6> */}
     <h6>
       <Link to="/about-me">About Me</Link>
     </h6>
