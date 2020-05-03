@@ -49,7 +49,7 @@ const videoList = videoUrls.map(({ url, img, type }) => {
         type,
       };
     default:
-      return formatYouTubeVideo(vid);
+      return formatYouTubeVideo({ url, img, type });
   }
 });
 
