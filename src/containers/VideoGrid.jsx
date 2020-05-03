@@ -23,9 +23,6 @@ class VideoGrid extends React.Component {
       selectedVideo: '',
       videoList,
     }
-    // this.getVideoList = this.getVideoList.bind(this)
-    this.toggleModal = this.toggleModal.bind(this)
-    this.toggleModalClass = this.toggleModalClass.bind(this)
   }
 
   // for using remote video list, slower load time
@@ -38,7 +35,7 @@ class VideoGrid extends React.Component {
   //   })
   // }
   //
-  // async getVideoList() {
+  // async getVideoList = () => {
   //   const videoListFetch = await fetch(
   //     // google spreadsheet where users with access can change the order and links to videos
   //     'https://script.google.com/macros/s/AKfycbyQDYZlgiqWUTXnZ80iTBpSU1666VXrrH7-jLR09Ldhknaq2LGt/exec'
@@ -48,7 +45,7 @@ class VideoGrid extends React.Component {
   //   return videoList
   // }
 
-  toggleModalClass() {
+  toggleModalClass = () => {
     const videoModal = document.getElementById('video-modal')
     if (this.state.modalVisible) {
       videoModal.classList.remove('visible')
@@ -59,7 +56,7 @@ class VideoGrid extends React.Component {
     }
   }
 
-  async toggleModal(video) {
+  toggleModal = async (video) => {
     this.toggleModalClass()
     await this.setState({
       modalVisible: !this.state.modalVisible,
@@ -70,7 +67,7 @@ class VideoGrid extends React.Component {
   render() {
     const videoGrid =
       this.state.videoList &&
-      this.state.videoList.map(video => (
+      this.state.videoList.map((video) => (
         <VideoPreview video={video} toggleModal={this.toggleModal} />
       ))
     return (

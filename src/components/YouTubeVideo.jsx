@@ -6,14 +6,13 @@ class YouTubeVideo extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: false
+      loading: false,
     }
-    this.toggleLoading = this.toggleLoading.bind(this)
   }
 
-  toggleLoading() {
+  toggleLoading = () => {
     this.setState({
-      loading: !this.state.loading
+      loading: !this.state.loading,
     })
   }
 
@@ -21,7 +20,8 @@ class YouTubeVideo extends React.Component {
     const { modalVisible, toggleModal, video } = this.props
     return (
       // eslint-disable-next-line
-      <div id="backdrop"
+      <div
+        id="backdrop"
         className={modalVisible ? 'visible' : 'hidden'}
         onClick={() => toggleModal('')}
       >
@@ -36,10 +36,14 @@ class YouTubeVideo extends React.Component {
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          style={this.state.loading ? {} : {
-            opacity: 1,
-            height: 'calc(85vw / 1.777777777777)'
-          }}
+          style={
+            this.state.loading
+              ? {}
+              : {
+                  opacity: 1,
+                  height: 'calc(85vw / 1.777777777777)',
+                }
+          }
         />
       </div>
     )
@@ -51,11 +55,11 @@ export default YouTubeVideo
 YouTubeVideo.defaultProps = {
   modalVisible: propTypes.bool,
   toggleModal: propTypes.func,
-  video: propTypes.string
+  video: propTypes.string,
 }
 
 YouTubeVideo.propTypes = {
   modalVisible: propTypes.bool,
   toggleModal: propTypes.func,
-  video: propTypes.string
+  video: propTypes.string,
 }

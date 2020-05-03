@@ -13,13 +13,9 @@ class Contact extends React.Component {
       message: '',
       showConfirmation: false,
     }
-    this.formatEmail = this.formatEmail.bind(this)
-    this.processMessage = this.processMessage.bind(this)
-    this.updateState = this.updateState.bind(this)
-    this.validateForm = this.validateForm.bind(this)
   }
 
-  validateForm(e) {
+  validateForm = (e) => {
     e.preventDefault()
     if (this.state.url.length > 0) {
       return false
@@ -27,7 +23,7 @@ class Contact extends React.Component {
     return this.processMessage()
   }
 
-  updateState(e) {
+  updateState = (e) => {
     const {
       target: { name, value },
     } = e
@@ -38,14 +34,14 @@ class Contact extends React.Component {
     })
   }
 
-  formatEmail() {
+  formatEmail = () => {
     return {
       formDataNameOrder: { ...this.state },
       formGoogleSheetName: 'responses',
     }
   }
 
-  async processMessage() {
+  processMessage = async () => {
     const queryString = qs.stringify({
       name: this.state.name,
       replyTo: this.state.replyTo,

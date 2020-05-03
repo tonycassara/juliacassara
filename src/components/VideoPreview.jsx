@@ -5,10 +5,9 @@ class VideoPreview extends React.Component {
   constructor(props) {
     super(props)
     this.state = { loaded: false }
-    this.handleLoad = this.handleLoad.bind(this)
   }
 
-  handleLoad() {
+  handleLoad = () => {
     this.setState({
       loaded: true,
     })

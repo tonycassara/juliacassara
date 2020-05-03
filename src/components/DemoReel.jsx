@@ -9,10 +9,9 @@ class DemoReel extends React.Component {
     this.state = {
       loading: true,
     }
-    this.toggleLoading = this.toggleLoading.bind(this)
   }
 
-  toggleLoading() {
+  toggleLoading = () => {
     this.setState({
       loading: !this.state.loading,
     })
