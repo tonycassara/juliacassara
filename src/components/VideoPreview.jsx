@@ -34,7 +34,7 @@ class VideoPreview extends React.Component {
         </svg>
       </div>
     ) : (
-      <a className="video-pane" href={video} target="_blank" style={this.state.loaded ? style : {}}>
+      <a className="video-pane" href={video} target="_blank" rel="noopener" style={this.state.loaded ? style : {}}>
         <img alt="ok" src={imageSource} className="video-screenshot" onLoad={this.handleLoad} />
         <svg width="100%" height="100%" viewBox="0 0 24 24" className="play-icon">
           <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
