@@ -22,26 +22,11 @@ class VideoPreview extends React.Component {
     const style = {
       animation: `450ms ease-out slideUp ${Math.random() * 500}ms forwards`,
     };
-    const imageSource =
-      type === 'youtube' ? img : import(`../${img}`).then(console.log);
+    const imageSource = type === 'youtube' ? img : import(`../${img}`);
     return (
-      <div
-        className="video-pane"
-        onClick={() => toggleModal(video)}
-        style={this.state.loaded ? style : {}}
-      >
-        <img
-          alt="ok"
-          src={imageSource}
-          className="video-screenshot"
-          onLoad={this.handleLoad}
-        />
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 24 24"
-          className="play-icon"
-        >
+      <div className="video-pane" onClick={() => toggleModal(video)} style={this.state.loaded ? style : {}}>
+        <img alt="ok" src={imageSource} className="video-screenshot" onLoad={this.handleLoad} />
+        <svg width="100%" height="100%" viewBox="0 0 24 24" className="play-icon">
           <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
         </svg>
       </div>

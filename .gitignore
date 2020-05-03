@@ -68,3 +68,7 @@ dist/
 
 # swp
 *.swp
+
+# parcel cache
+.cache/
+.parcel-cache/
