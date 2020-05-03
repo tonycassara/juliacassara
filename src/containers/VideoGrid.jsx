@@ -1,11 +1,5 @@
 import React, { Fragment } from 'react';
-import {
-  Footer,
-  NavBar,
-  VideoPreview,
-  VideoModal,
-  YouTubeVideo,
-} from '../components';
+import { Footer, NavBar, VideoPreview, VideoModal, YouTubeVideo } from '../components';
 
 import videoList from '../data/videoList'; // faster load time
 
@@ -65,9 +59,8 @@ class VideoGrid extends React.Component {
   render() {
     const videoGrid =
       this.state.videoList &&
-      this.state.videoList.map((video) => (
-        <VideoPreview video={video} toggleModal={this.toggleModal} />
-      ));
+      this.state.videoList.map((video) => <VideoPreview video={video} toggleModal={this.toggleModal} />);
+    const selectedVideoType = this.state.selectedVideo;
     return (
       <div id="main">
         <NavBar />

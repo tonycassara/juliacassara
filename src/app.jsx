@@ -12,7 +12,7 @@ const App = () => (
         <Route path="/photo" component={Photo} />
         <Route path="/about-me" component={AboutMe} />
         <Route path="/contact" component={Contact} />
-        <Route path="*" component={VideoGrid} />
+        <Route path="/" component={VideoGrid} />
       </Switch>
     </Router>
   </div>

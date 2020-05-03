@@ -1,13 +1,23 @@
 import formatYouTubeVideo from '../helpers/formatYouTubeVideo';
 import formatFacebookVideo from '../helpers/formatFacebookVideo';
 
+/**
+ *
+ * FB video example
+ * {
+ *   type: 'facebook',
+ *   url: 'https://www.facebook.com/firstmediasoyummy/videos/2604245713017982/',
+ *   img: 'fb-plantbased',
+ * }
+ */
+
 const videoUrls = [
-  { type: 'youtube', url: 'https://www.youtube.com/watch?v=8yYFet9bqyw' }, // Grayson Luxury x Christopher Guy
   {
     type: 'facebook',
-    url: 'https://www.facebook.com/firstmediasoyummy/videos/2604245713017982/',
-    img: 'assets/thumbnails/fb-plantbased.png',
-  }, // FB video
+    url: 'https://www.facebook.com/1658649031115908/posts/2571278879852914',
+    img: 'chickpea-potato-fritters',
+  }, // Chickpea & Sweet Potato Fritters
+  { type: 'youtube', url: 'https://www.youtube.com/watch?v=8yYFet9bqyw' }, // Grayson Luxury x Christopher Guy
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=nUg9frbE5vY' }, // Grayson Living | Luxury Home Decor
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=VEMyhLQNXQg' }, // Grayson Luxury | Tell Us What You Need
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=u-5y3fFdo_c' }, // Instagram Story Ad | Grayson Luxury | Design Your Dream Home
@@ -16,9 +26,9 @@ const videoUrls = [
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=YAZ7q3oDYmk' }, // Get The V.I.P. Treatment | Grayson Living | Instagram Story
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=aE6bMyUF4bg' }, // Beekeeper's Naturals
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=Sj3SMgfqKd4' }, // Grayson Living | Black Friday 2019 | IGTV
-  { type: 'youtube', url: 'https://www.youtube.com/watch?v=q2yJthvwOEc' }, // Meze Classic 99 Luxury Wood Headphones | My Honest Review
-  { type: 'youtube', url: 'https://www.youtube.com/watch?v=zRy2tlXqshk' }, // Keratin
-  { type: 'youtube', url: 'https://www.youtube.com/watch?v=a1j8tnRshMQ' }, // How I Got My First Job as a Programmer (with no experience)
+  { type: 'youtube', url: 'https://www.youtube.com/watch?v=yasXcOpToUk' }, // All About Retinol | BeautyBio
+  { type: 'youtube', url: 'https://www.youtube.com/watch?v=LmrvH6NEzXw' }, // Shop Christmas Decorations at Grayson Luxury
+  { type: 'youtube', url: 'https://www.youtube.com/watch?v=_JusDjKFMlk' }, // The Holiday Sale | Grayson Living
 ];
 
 const videoList = videoUrls.map((vid) => {
