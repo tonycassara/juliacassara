@@ -2,8 +2,8 @@
   "name": "juliacassara",
   "version": "1.0.0",
   "description": "Julia Cassara Videography",
-  "main": "dist/index.html",
-  "repository": "https://github.com/acassara2/juliacaban.git",
+  "main": "dist/index.js",
+  "repository": "https://github.com/tonycassara/juliacaban.git",
   "author": "Tony Cassara <acassara@gmail.com>",
   "license": "MIT",
   "engines": {
@@ -18,15 +18,17 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "dev": "parcel src/index.html src/index.jsx --port=3000 --open",
+    "dev": "parcel src/index.html --port=3000 --open",
     "prod": "run-s prod:*",
     "prod:rimraf": "rm -rf dist/*",
-    "prod:build": "parcel build src/index.html src/index.jsx",
+    "prod:build": "parcel build src/index.html",
     "prod:start": "parcel serve dist/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.2",
     "npm-run-all": "^4.1.3",
