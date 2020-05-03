@@ -1,18 +1,18 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: 'src/index.html',
   filename: 'index.html',
   favicon: 'src/assets/favicon.jpg',
   css: ['src/styles.css'],
-})
+});
 
 const uglifyPlugin = new UglifyJsPlugin({
   cache: true,
   parallel: true,
-})
+});
 
 module.exports = {
   devServer: {
@@ -51,7 +51,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              // outputPath: 'assets/', // causing issues with facebook image scraping
+              outputPath: 'assets/', // causing issues with facebook image scraping
             },
           },
         ],
@@ -62,4 +62,4 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
   },
   plugins: [htmlPlugin, uglifyPlugin],
-}
+};

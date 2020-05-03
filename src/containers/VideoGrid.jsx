@@ -1,15 +1,13 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import {
   Footer,
   NavBar,
   VideoPreview,
   VideoModal,
   YouTubeVideo,
-} from '../components'
-import LoadingIcon from '../assets/LoadingIcon'
-import formatYouTubeLink from '../helpers/formatYouTubeLink'
+} from '../components';
 
-import videoList from '../data/videoList' // faster load time
+import videoList from '../data/videoList'; // faster load time
 
 /* global document */
 
@@ -17,12 +15,12 @@ import videoList from '../data/videoList' // faster load time
 
 class VideoGrid extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       modalVisible: false,
       selectedVideo: '',
       videoList,
-    }
+    };
   }
 
   // for using remote video list, slower load time
@@ -41,35 +39,35 @@ class VideoGrid extends React.Component {
   //     'https://script.google.com/macros/s/AKfycbyQDYZlgiqWUTXnZ80iTBpSU1666VXrrH7-jLR09Ldhknaq2LGt/exec'
   //   )
   //   const videoListBlob = await videoListFetch.json()
-  //   const videoList = videoListBlob.map(url => formatYouTubeLink(url[0]))
+  //   const videoList = videoListBlob.map(url => formatYouTubeVideo(url[0]))
   //   return videoList
   // }
 
   toggleModalClass = () => {
-    const videoModal = document.getElementById('video-modal')
+    const videoModal = document.getElementById('video-modal');
     if (this.state.modalVisible) {
-      videoModal.classList.remove('visible')
-      videoModal.classList.add('hidden')
+      videoModal.classList.remove('visible');
+      videoModal.classList.add('hidden');
     } else {
-      videoModal.classList.remove('hidden')
-      videoModal.classList.add('visible')
+      videoModal.classList.remove('hidden');
+      videoModal.classList.add('visible');
     }
-  }
+  };
 
   toggleModal = async (video) => {
-    this.toggleModalClass()
+    this.toggleModalClass();
     await this.setState({
       modalVisible: !this.state.modalVisible,
       selectedVideo: video,
-    })
-  }
+    });
+  };
 
   render() {
     const videoGrid =
       this.state.videoList &&
       this.state.videoList.map((video) => (
         <VideoPreview video={video} toggleModal={this.toggleModal} />
-      ))
+      ));
     return (
       <div id="main">
         <NavBar />
@@ -97,8 +95,8 @@ class VideoGrid extends React.Component {
           />
         </VideoModal>
       </div>
-    )
+    );
   }
 }
 
-export default VideoGrid
+export default VideoGrid;

@@ -1,27 +1,29 @@
-import React from 'react'
-import propTypes from 'prop-types'
+import React from 'react';
+import propTypes from 'prop-types';
 
 class VideoPreview extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { loaded: false }
+    super(props);
+    this.state = { loaded: false };
   }
 
   handleLoad = () => {
     this.setState({
       loaded: true,
-    })
-  }
+    });
+  };
 
   render() {
     const {
-      video: { video, img },
+      video: { video, img, type },
       toggleModal,
-    } = this.props
+    } = this.props;
     // eslint-disable-next-line
     const style = {
       animation: `450ms ease-out slideUp ${Math.random() * 500}ms forwards`,
-    }
+    };
+    const imageSource =
+      type === 'youtube' ? img : import(`../${img}`).then(console.log);
     return (
       <div
         className="video-pane"
@@ -30,7 +32,7 @@ class VideoPreview extends React.Component {
       >
         <img
           alt="ok"
-          src={img}
+          src={imageSource}
           className="video-screenshot"
           onLoad={this.handleLoad}
         />
@@ -43,18 +45,18 @@ class VideoPreview extends React.Component {
           <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
         </svg>
       </div>
-    )
+    );
   }
 }
 
-export default VideoPreview
+export default VideoPreview;
 
 VideoPreview.defaultProps = {
   toggleModal: propTypes.func,
   video: propTypes.object,
-}
+};
 
 VideoPreview.propTypes = {
   toggleModal: propTypes.func,
   video: propTypes.object,
-}
+};
