@@ -17,6 +17,16 @@ const videoUrls = [
     url: 'https://www.facebook.com/1658649031115908/posts/2571278879852914',
     img: 'chickpea-potato-fritters',
   }, // Chickpea & Sweet Potato Fritters
+  {
+    type: 'facebook',
+    url: 'https://www.facebook.com/1658649031115908/posts/2559609134353222',
+    img: 'umami-glazed-pork-meatballs',
+  }, // Umami Glazed Pork Meatballs
+  {
+    type: 'facebook',
+    url: 'https://www.facebook.com/1658649031115908/posts/2572229053091230',
+    img: 'buffalo-chicken-rice-bowl',
+  }, // Buffalo Chicken Rice Bowl
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=8yYFet9bqyw' }, // Grayson Luxury x Christopher Guy
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=nUg9frbE5vY' }, // Grayson Living | Luxury Home Decor
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=VEMyhLQNXQg' }, // Grayson Luxury | Tell Us What You Need
