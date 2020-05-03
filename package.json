@@ -22,8 +22,7 @@
     "prod": "run-s prod:*",
     "prod:rimraf": "rm -rf dist/*",
     "prod:build": "parcel build src/index.html",
-    "prod:copy-redirects": "cp _redirects dist/_redirects",
-    "prod:start": "node src/server.js"
+    "prod:copy-redirects": "cp _redirects dist/_redirects"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
