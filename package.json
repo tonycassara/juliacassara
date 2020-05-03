@@ -7,7 +7,7 @@
   "author": "Tony Cassara <acassara@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "12.13.0"
+    "node": "12.16.3"
   },
   "dependencies": {
     "express": "^4.16.3",
