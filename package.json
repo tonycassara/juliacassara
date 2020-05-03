@@ -21,8 +21,7 @@
     "dev": "parcel src/index.html --port=3000 --open",
     "prod": "run-s prod:*",
     "prod:rimraf": "rm -rf dist/*",
-    "prod:build": "parcel build src/index.html",
-    "prod:start": "parcel serve dist/index.html"
+    "prod:build": "parcel build src/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
