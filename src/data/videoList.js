@@ -1,5 +1,4 @@
 import formatYouTubeVideo from '../helpers/formatYouTubeVideo';
-import formatFacebookVideo from '../helpers/formatFacebookVideo';
 
 /**
  *
@@ -41,10 +40,14 @@ const videoUrls = [
   { type: 'youtube', url: 'https://www.youtube.com/watch?v=_JusDjKFMlk' }, // The Holiday Sale | Grayson Living
 ];
 
-const videoList = videoUrls.map((vid) => {
-  switch (vid.type) {
+const videoList = videoUrls.map(({ url, img, type }) => {
+  switch (type) {
     case 'facebook':
-      return formatFacebookVideo(vid);
+      return {
+        video: url,
+        img,
+        type,
+      };
     default:
       return formatYouTubeVideo(vid);
   }
