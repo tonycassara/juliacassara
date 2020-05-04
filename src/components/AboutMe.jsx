@@ -28,6 +28,15 @@ class AboutMe extends React.Component {
     };
   }
 
+  componentDidMount() {
+    const node = document.createElement('script');
+    node.src = 'https://apis.google.com/js/platform.js';
+    node.type = 'text/javascript';
+    node.defer = true;
+    node.charset = 'utf-8';
+    document.getElementsByTagName('head')[0].appendChild(node);
+  }
+
   toggleLoading = () => {
     this.setState({
       loading: !this.state.loading,
@@ -58,13 +67,13 @@ class AboutMe extends React.Component {
             <br />
             <div className="subscribe-wrapper">
               <div
-                class="g-ytsubscribe"
+                className="g-ytsubscribe"
                 data-channelid="UC_ZeukMPIbdknzJZYBn1jlw"
                 data-layout="full"
                 data-count="default"
               />
               <div
-                class="g-ytsubscribe"
+                className="g-ytsubscribe"
                 data-channelid="UCCWgCP5rY1cEVGGK2bHcY4w"
                 data-layout="full"
                 data-count="default"
