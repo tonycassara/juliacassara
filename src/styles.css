@@ -391,6 +391,12 @@ input.submit:hover {
   width: 100%;
 }
 
+.subscribe-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 @media only screen and (max-width: 960px) {
   #headshot {
     max-width: 50vw;
@@ -402,9 +408,6 @@ input.submit:hover {
   input.submit {
     width: 20vw;
   }
-}
-
-@media only screen and (min-width: 720px) and (max-width: 960px) {
   .about {
     width: 85vw;
     grid-gap: 1em;
@@ -413,6 +416,12 @@ input.submit:hover {
       'p p p'
       't t t'
       'c c c';
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  #nav-bar {
+    margin: 2em 0;
   }
   .video-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -444,7 +453,7 @@ input.submit:hover {
 
 @media only screen and (max-width: 600px) {
   #nav-bar {
-    margin: 1em 1em 1em 2em;
+    margin: 1em 0;
   }
   #menu-bar {
     display: grid;

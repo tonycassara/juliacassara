@@ -7,7 +7,7 @@ import beautyskin from '../assets/logos/beautyskin.png';
 import cappellos from '../assets/logos/cappellos.svg';
 import douglas from '../assets/logos/douglas.svg';
 import foreo from '../assets/logos/foreo.svg';
-import iherb from '../assets/logos/iherb.svg';
+import iherb from '../assets/logos/iherb.png';
 import katespade from '../assets/logos/katespade.svg';
 import kitehill from '../assets/logos/kitehill.png';
 import larocheposay from '../assets/logos/larocheposay.png';
@@ -54,6 +54,21 @@ class AboutMe extends React.Component {
               <li>Final Cut Pro, Adobe Premiere, Photoshop, Lightroom</li>
               <li>Directing, Recording, Editing, Cut-Downs, Audio Mixing</li>
               <li>Color Correcting, Touch-ups, Cross-Platform Content</li>
+            </div>
+            <br />
+            <div className="subscribe-wrapper">
+              <div
+                class="g-ytsubscribe"
+                data-channelid="UC_ZeukMPIbdknzJZYBn1jlw"
+                data-layout="full"
+                data-count="default"
+              />
+              <div
+                class="g-ytsubscribe"
+                data-channelid="UCCWgCP5rY1cEVGGK2bHcY4w"
+                data-layout="full"
+                data-count="default"
+              />
             </div>
           </div>
           <img src={julia} id="headshot" onLoad={this.toggleLoading} style={this.state.loading ? {} : fadeIn} />
