@@ -10,7 +10,7 @@
     "node": "12.16.3"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "prop-types": "^15.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
